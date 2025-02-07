@@ -1,0 +1,34 @@
+### Recover all movies
+GET http://localhost:3000/movies
+
+### Recover a movie by id
+GET http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+
+### Recover a movie by Genre
+GET http://localhost:3000/movies?genre=FANTASY
+
+### Create a movie with POST
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+    "title": "Harry Potter and the Philosopher's Stone",
+    "year": 2001,
+    "director": "Chris Columbus",
+    "duration": 152,
+    "poster": "https://i.ebayimg.com/images/g/~gUAAOSwIOthElD4/s-l1600.webp",
+    "genre": [
+        "Adventure",
+        "Family",
+        "Fantasy"
+    ],
+    "rate": 7.6
+}
+
+### Update a movie with PATCH
+PATCH http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+  "year": 2025
+}
